@@ -34,7 +34,7 @@ html, body {
     font-size: 3rem;
 }
 
-.note-title:read-only, .note-textarea:read-only {
+.note-title:read-only, .note-textarea:read-only, .date {
     color: #757575;
 }
 .list-container .card {
