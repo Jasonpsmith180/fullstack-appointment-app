@@ -8,7 +8,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const routes = require("./controllers");
-const Year = require("./assets/js/year.json");
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
