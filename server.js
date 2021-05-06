@@ -42,10 +42,6 @@ app.get("/", function (req, res) {
   res.render("main.handlebars");
 });
 
-app.get("/appointments", function (req, res) {
-  res.sendFile(path.join(__dirname, "/assets/pages/appointments.html"));
-});
-
 app.post("/credentials", function (req, res) {
   res.sendFile(path.join(__dirname, "/assets/pages/creds.html"));
 });
