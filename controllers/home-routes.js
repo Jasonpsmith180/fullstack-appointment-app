@@ -41,7 +41,7 @@ router.get('/post/:id', (req, res) => {
         const post = dbPostData.get({ plain: true });
 
         // pass data into the template
-        res.render('single-post', { 
+        res.render('appointment', { 
             post 
         });
     })
