@@ -8,8 +8,14 @@ const app = express();
 const initializePassport = require('../../config/passport');
 initializePassport(
   passport, 
+  // router.post("/", (req, res) => {
+  //   User.findOne({
+  //         where: {
+  //           email: req.body.email,
+  //         }
+  // });
   email => users.find(user => user.email === email)
-);
+)
 
 
 app.use(flash());
