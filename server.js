@@ -42,10 +42,6 @@ app.get("/", function (req, res) {
   res.render("main.handlebars");
 });
 
-app.get("/list", function (req, res) {
-  res.sendFile(path.join(__dirname, "/assets/pages/list.html"));
-});
-
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
