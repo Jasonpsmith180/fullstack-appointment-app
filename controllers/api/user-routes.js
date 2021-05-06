@@ -1,5 +1,26 @@
 const router = require("express").Router();
 const { User, Post } = require("../../models");
+// const passport = require('passport');
+// const express = require('express');
+// const flash = require('express-flash');
+// const app = express();
+
+// const initializePassport = require('../../config/passport');
+// initializePassport(
+//   passport, 
+//   // router.post("/", (req, res) => {
+//   //   User.findOne({
+//   //         where: {
+//   //           email: req.body.email,
+//   //         }
+//   // });
+//   email => users.find(user => user.email === email)
+// )
+
+
+// app.use(flash());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 router.get("/", (req, res) => {
   User.findAll({
@@ -41,8 +62,7 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   User.create({
     username: req.body.username,
-    firstname: req.body.firstname,
-    lastname: req.body.lastname,
+    email: req.body.email,
     password: req.body.password,
   })
     .then((dbUserData) => {
@@ -60,34 +80,40 @@ router.post("/", (req, res) => {
     });
 });
 
-router.post("/login", (req, res) => {
+router.post('/login', (req, res) => {
   User.findOne({
-    where: {
-      email: req.body.email,
-    },
-  }).then((dbUserData) => {
-    if (!dbUserData) {
-      res.status(400).json({ message: "No user with that email address!" });
-      return;
-    }
+      where: {
+          email: req.body.email
+      }
+  })
+  .then(dbUserData => {
+      if (!dbUserData) {
+          res.status(400).json({ message: 'No user found with this email address' });
+          return;
+      }
 
-    const validPassword = dbUserData.checkPassword(req.body.password);
+      const validPassword = dbUserData.checkPassword(req.body.password);
+      if (!validPassword) {
+          res.status(400).json({ message: 'Incorrect password' });
+          return;
+      }
 
-    if (!validPassword) {
-      res.status(400).json({ message: "Incorrect password!" });
-      return;
-    }
+      req.session.save(() => {
+          req.session.user_id = dbUserData.id,
+          req.session.username = dbUserData.username;
+          req.session.loggedIn = true;
 
-    req.session.save(() => {
-      // declare session variables
-      req.session.user_id = dbUserData.id;
-      req.session.username = dbUserData.username;
-      req.session.loggedIn = true;
-
-      res.json({ user: dbUserData, message: "You are now logged in!" });
-    });
+          res.json({ user: dbUserData, message: 'You are now logged in' });
+      });
   });
 });
+
+// router.post("/login", passport.authenticate('local', {
+//     // successRedirect: '/',
+//     // failureRedirect: '/login',
+//     // failureFlash: true
+//   })
+// )
 
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {

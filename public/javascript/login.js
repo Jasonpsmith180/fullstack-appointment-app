@@ -8,24 +8,24 @@ async function signupFormHandler(event) {
 
     console.log(username, email, password)
 
-    // if (username && email && password) {
-    //     const response = await fetch('/api/users', {
-    //         method: 'post',
-    //         body: JSON.stringify({
-    //             username,
-    //             email,
-    //             password
-    //         }),
-    //         headers: { 'Content-Type': 'application/json' }
-    //     });
+    if (username && email && password) {
+        const response = await fetch('/api/users', {
+            method: 'post',
+            body: JSON.stringify({
+                username,
+                email,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        });
 
-    //     // check response status
-    //     if (response.ok) {
-    //         console.log('success')
-    //     } else {
-    //         alert(response.statusText);
-    //     }
-    // }
+        // check response status
+        if (response.ok) {
+            console.log('success')
+        } else {
+            alert(response.statusText);
+        }
+    }
 }
 
 
@@ -39,23 +39,23 @@ async function loginFormHandler(event) {
 
     console.log(email, password);
 
-    // if (email && password) {
-    //     const response = await fetch('/api/users/login', {
-    //         method: 'post',
-    //         body: JSON.stringify({
-    //             email,
-    //             password
-    //         }),
-    //         headers: { 'Content-Type': 'application/json' }
-    //     });
+    if (email && password) {
+        const response = await fetch('/api/users/login', {
+            method: 'post',
+            body: JSON.stringify({
+                email,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        });
 
-    //     // check response status
-    //     if (response.ok) {
-    //         document.location.replace('/dashboard');
-    //     } else {
-    //         alert(response.statusText);
-    //     }
-    // }
+        // check response status
+        if (response.ok) {
+            document.location.replace('/');
+        } else {
+            alert(response.statusText);
+        }
+    }
 }
 
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);

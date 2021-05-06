@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Appointment Keeper</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Tech Blog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-    <div class="jumbotron text-center">
-        <h1>Appointment Keeper</h1>
+    <div class="wrapper">
+        <header>
+            <h1>
+                <a href="/">Appointment Keeper</a>
+            </h1>
+            <nav>
+
+                <a href="/">Home</a>
+                <button id="logout" class="btn-no-style">logout</button>
+
+                <a href="/login">login</a>
+
+            </nav>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+        <footer>
+            Thanks for visiting!
+        </footer>
     </div>
 
-    {{{ body }}}
+
+    <script src="/javascript/logout.js"></script>
+
 
 </body>
 
