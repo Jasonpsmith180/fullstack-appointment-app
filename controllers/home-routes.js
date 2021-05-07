@@ -41,9 +41,7 @@ router.get('/post/:id', (req, res) => {
         const post = dbPostData.get({ plain: true });
 
         // pass data into the template
-        res.render('single-post', { 
-            post 
-        });
+        res.render('appointment', post);
     })
     .catch(err => {
         console.log(err);
