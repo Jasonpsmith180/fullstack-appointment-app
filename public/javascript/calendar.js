@@ -258,7 +258,7 @@ function setDates(myNum) {
 
   let monthBoxMiddle = document.createElement("div");
   monthBoxMiddle.innerHTML = thisMonth + " " + thisYear;
-  monthBoxMiddle.setAttribute("class", "grid-item");
+  monthBoxMiddle.setAttribute("class", "grid-item middleArea");
 
   let monthElement = document.createElement("div");
 
@@ -280,7 +280,6 @@ function setDates(myNum) {
   let lineBreak = document.createElement("br");
 
   let todayBtn = document.createElement("div");
-  todayBtn.setAttribute("class", "fa fa-home homeButton homeToToday");
 
   todayBtn.setAttribute("onClick", "refreshPage()");
 
@@ -340,7 +339,7 @@ function createDays(
   console.log("Spacer days: " + spacerDays);
   ////////////////////////////////
   let calendar = document.createElement("div");
-  calendar.classList.add("grid-container", "calendar", "text-center");
+  calendar.classList.add("grid-container", "calendar-days", "text-center");
 
   for (let h = 0; h < spacerDays; h++) {
     let newSpacerDays = document.createElement("div");
