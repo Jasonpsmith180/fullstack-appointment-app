@@ -159,7 +159,6 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -179,7 +178,6 @@ header h1 {
 
 main {
   flex: 1;
-  padding: 2% 4%;
 }
 
 .btn-no-style {
@@ -286,6 +284,11 @@ footer {
 .centerArea input {
   width: 50%;
   height: 30px;
+  font-size: 20px;
+}
+
+.centerArea textarea {
+  font-size: 20px;
 }
 
 .left {
@@ -297,4 +300,88 @@ footer {
   display: inline-block;
   float: right;
   width: 50%;
+}
+
+#date {
+  font-size: 30px;
+  margin-top: 20px;
+}
+.grid-container .monthEl {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.arrow {
+  margin-top: 5%;
+}
+.fullDate {
+  font-size: 15px;
+  position: absolute;
+  margin-top: -2%;
+  margin-left: 6%;
+  width: 80%;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.grid-item,
+.fullDate {
+  color: white;
+}
+
+.day {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 25%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.day:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow:hover,
+.homeButton:hover {
+  color: rgb(61, 61, 61);
+}
+
+.todayDate {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.todayDate:hover {
+  background-color: white;
+}
+
+.homeToToday {
+  float: right;
+  display: flex;
+  margin-top: -20px;
+}
+
+.topTitle {
+  width: 100%;
+  text-align: center;
+}
+
+#calendar {
+  width: 60%;
+  margin-left: 20%;
+  position: absolute;
+  border-radius: 20px;
+  color: black;
+  background-color: rgba(126, 126, 126, 0.459);
+  z-index: 1000;
+  backdrop-filter: blur(25px);
+}
+
+.createAppointment {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
 }
