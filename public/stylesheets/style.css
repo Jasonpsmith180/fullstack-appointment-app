@@ -244,12 +244,10 @@ footer {
 }
 
 .centerArea {
-  background-color: rgba(126, 126, 126, 0.459);
   text-align: center;
   margin-top: 100px;
   z-index: 1000;
   border-radius: 10px;
-  backdrop-filter: blur(25px);
   padding: 20px;
   padding-bottom: 30px;
   font-size: 30px;
@@ -258,6 +256,7 @@ footer {
 }
 .centerArea input {
   font-size: 20px;
+  width: 60%;
 }
 
 .centerArea textarea {
@@ -644,14 +643,12 @@ footer {
   }
 
   .centerArea {
-    background-color: rgba(126, 126, 126, 0.459);
     text-align: center;
     width: 90%;
     margin-left: 5%;
     margin-top: 100px;
     z-index: 1000;
     border-radius: 10px;
-    backdrop-filter: blur(25px);
     padding: 20px;
     padding-bottom: 30px;
     font-size: 20px;
@@ -841,10 +838,6 @@ footer {
   margin-top: -100px;
 }
 
-.container {
-  margin-top: 150px;
-  width: 50%;
-}
 .container #calendar {
   width: 60%;
   margin-left: 20%;
