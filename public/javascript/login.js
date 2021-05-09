@@ -1,65 +1,70 @@
 async function signupFormHandler(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  // get signup info
-  const username = document.querySelector("#username-signup").value.trim();
-  const email = document.querySelector("#email-signup").value.trim();
-  const password = document.querySelector("#password-signup").value.trim();
+    // get signup info
+    const username = document.querySelector('#username-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
 
-  console.log(username, email, password);
+    console.log(username, password)
 
-  if (username && email && password) {
-    const response = await fetch("/api/users", {
-      method: "post",
-      body: JSON.stringify({
-        username,
-        email,
-        password,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
+    if (username && password) {
+        const response = await fetch('/api/users', {
+            method: 'post',
+            body: JSON.stringify({
+                username,
+                email,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        });
 
-    // check response status
-    if (response.ok) {
-      console.log("success");
-    } else {
-      alert(response.statusText);
+        // check response status
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
+        }
     }
   }
-}
+
+
+// async function loginFormHandler(event) {
+//   event.preventDefault();
+
+//   // get login info
+//   const email = document.querySelector("#email-login").value.trim();
+//   const password = document.querySelector("#password-login").value.trim();
 
 async function loginFormHandler(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  // get login info
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+    // get login info
+    const email = document.querySelector('#email-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
 
-  console.log(email, password);
+    console.log(email, password);
 
-  if (email && password) {
-    const response = await fetch("/api/users/login", {
-      method: "post",
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
+    if (email && password) {
+        const response = await fetch('/api/users/login', {
+            method: 'post',
+            body: JSON.stringify({
+                email,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        });
 
-    // check response status
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      alert(response.statusText);
+        // check response status
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
+        }
     }
   }
-}
 
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
 
-document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);
+
+document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
