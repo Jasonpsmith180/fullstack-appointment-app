@@ -1,11 +1,12 @@
 const router = require("express").Router();
 const { Post, User } = require("../../models");
+const moment = require('moment');
 
 router.get("/", (req, res) => {
   console.log("=================");
   Post.findAll({
-    order: [["created_at", "DESC"]],
-    attributes: ["id", "content", "title", "created_at"],
+    order: [["date_time", "ASC"]],
+    attributes: ["id", "content", "title", "date_time", "created_at"],
   })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
@@ -44,6 +45,7 @@ router.post("/", (req, res) => {
   Post.create({
     title: req.body.title,
     content: req.body.content,
+    date_time: req.body.date_time,
     user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
