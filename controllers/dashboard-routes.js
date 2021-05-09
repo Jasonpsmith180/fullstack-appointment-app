@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true})); 
-        res.render('homepage', {
+        res.render('dashboard', {
             posts,
             loggedIn: req.session.loggedIn
         });
@@ -46,7 +46,7 @@ router.get('/post/:id', (req, res) => {
         const post = dbPostData.get({ plain: true });
 
         // pass data into the template
-        res.render('appointment', post);
+        res.render('dashboard', post);
     })
     .catch(err => {
         console.log(err);

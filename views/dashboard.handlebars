@@ -1,0 +1,21 @@
+{{#if posts.length}}
+<section>
+    <h2>Your Appointments</h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Appointment</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+
+{{!-- <ol class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post }}
+    </li>
+    {{/each}}
+</ol> --}}
