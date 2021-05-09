@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
   integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
@@ -21,15 +22,19 @@
   <div class="itemInDash4">
     <h2>List of All Appointments</h2>
     <div id="listOfAppts">
-      <h5>Appointment Item will go here</h5>
-      <h5>Appointment Item will go here</h5>
-      <h5>Appointment Item will go here</h5>
-      <h5>Appointment Item will go here</h5>
-      <h5>Appointment Item will go here</h5>
-      <h5>Appointment Item will go here</h5>
+      {{#if posts.length}}
+      <section>
+          <h2>Your Appointments</h2>
+          <ol>
+              {{#each posts as |post|}}
+              <li>
+              {{> post-info post}}
+              <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Appointment</a>
+              </li>
+              {{/each}}
+          </ol>
+      </section>
+      {{/if}}
     </div>
   </div>
 </div>
-
-
-<script src="/javascript/calendar.js"></script>

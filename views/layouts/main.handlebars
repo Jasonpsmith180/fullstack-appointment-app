@@ -16,12 +16,7 @@
                 <a href="/">Appointment Keeper</a>
             </h1>
             <nav>
-
-                <a href="/">Home</a>
-                <a id="logout" class="btn-no-style">logout</a>
-
-                <a href="/login">login</a>
-
+                {{> nav }}
             </nav>
         </header>
         <main>
@@ -35,9 +30,9 @@
         </footer>
     </div>
 
-
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-
+    {{/if}}
 
 </body>
 
