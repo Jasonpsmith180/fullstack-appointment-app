@@ -1,6 +1,5 @@
 <section class="centerArea">
     <h2>Create New Appointment</h2>
-    {{ loggedIn }}
     <form class="new-post-form">
         <div>
             <label for="appointment-title">Appointment Title</label>
@@ -14,6 +13,18 @@
         </div>
         <button type="submit" class="btn">Create</button>
     </form>
+</section>
+
+<section>
+    <h2>Your Appointments</h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Appointment</a>
+        </li>
+        {{/each}}
+    </ol>
 </section>
 
 <script src="/javascript/add-post.js"></script>
