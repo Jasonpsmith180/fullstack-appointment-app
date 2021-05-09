@@ -386,7 +386,7 @@ footer {
 }
 
 #calendar {
-  width: 60%;
+  width: 10%;
   margin-left: 20%;
   position: absolute;
   border-radius: 20px;
@@ -810,4 +810,34 @@ footer {
     margin-left: 20%;
     color: black;
   }
+}
+
+.itemInDash1 {
+  grid-area: header;
+}
+.itemInDash2 {
+  grid-area: calendar;
+}
+.itemInDash3 {
+  grid-area: quote;
+}
+.itemInDash4 {
+  grid-area: list;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "quote calendar calendar list";
+}
+
+.dashboard div {
+  background-color: red;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.itemInDash3 #calendar {
+  width: 20%;
 }
