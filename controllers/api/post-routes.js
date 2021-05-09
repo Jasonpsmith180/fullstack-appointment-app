@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Post, User } = require("../../models");
-const moment = require('moment');
 
 router.get("/", (req, res) => {
   console.log("=================");
@@ -60,6 +59,7 @@ router.put("/:id", (req, res) => {
     {
       title: req.body.title,
       content: req.body.content,
+      date_time: req.body.date_time
     },
     {
       where: {

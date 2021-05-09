@@ -3,7 +3,9 @@ async function newFormHandler(event) {
 
     const title = document.querySelector('input[name="appointment-title"]').value;
     const content = document.querySelector('textarea[name="appointment-text"]').value;
-    const date_time = document.querySelector('textarea[name="appointment-date"]').value;
+    const date_time = document.querySelector('input[name="appointment-date"]').value;
+
+    console.log(title, content, date_time);
 
     const response = await fetch(`/api/posts`, {
     method: 'POST',
@@ -18,9 +20,9 @@ async function newFormHandler(event) {
     });
 
     if (response.ok) {
-    document.location.replace('/appointment');
+        document.location.replace('/appointment');
     } else {
-    alert(response.statusText);
+        alert(response.statusText);
     }
 }
 
