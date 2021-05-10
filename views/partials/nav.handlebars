@@ -1,6 +1,9 @@
 {{#if loggedIn}}
-<a href="/dashboard">dashboard</a>
-<a id="logout" class="btn-no-style">logout</a>
+<a href="/dashboard">dashboard <span class="fa fa-th"></span></a>
+
+<a id="logout" class="btn-no-style">logout <span class="fa fa-user"></span></a>
 {{else}}
-<a href="/login">login</a>
+
+
+<a href="/login">login <span class="fa fa-lock"></span></a>
 {{/if}}
