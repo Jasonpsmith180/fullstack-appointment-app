@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const { User, Post } = require("../../models");
-// const passport = require('passport');
 const express = require('express');
-// const flash = require('express-flash');
-// const app = express();
+const passport = require('passport');
+const flash = require('express-flash');
+const app = express();
 
 // const initializePassport = require('../../config/passport');
 // initializePassport(
@@ -13,9 +13,9 @@ const express = require('express');
 //           where: {
 //             email: req.body.email
 //           }
-//   });
+//     });
 //   email => users.find(user => user.email === email)
-// )
+// ))
 
 
 // app.use(flash());
@@ -109,15 +109,11 @@ router.post('/login', (req, res) => {
 });
 
 // router.post("/login", passport.authenticate('local', {
-//     successRedirect: '/api/users/hello',
-//     failureRedirect: '/fail',
-//     failureFlash: true
+//     successRedirect: '/dashboard',
+//     failureRedirect: '/login',
+//     failureFlash: true,
 //   })
 // )
-
-router.get('/hello', (req, res) => {
-  res.send('hi');
-});
 
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
