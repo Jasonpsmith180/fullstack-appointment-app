@@ -27,14 +27,14 @@
     <div id="listOfAppts">
       {{#if posts.length}}
       <section>
-        <ol>
+        <ul class="apptList">
           {{#each posts as |post|}}
           <li>
             {{> post-info post}}
             <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Appointment</a>
           </li>
           {{/each}}
-        </ol>
+        </ul>
       </section>
       {{/if}}
     </div>
