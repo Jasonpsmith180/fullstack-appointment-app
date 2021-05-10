@@ -227,6 +227,12 @@ main {
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
+  border: 1px solid black;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  font-size: 20px;
 }
 
 #appointment-date {
@@ -275,7 +281,7 @@ footer {
 }
 .centerArea input {
   font-size: 20px;
-  width: 60%;
+  width: 40%;
 }
 
 .centerArea textarea {
@@ -293,6 +299,10 @@ footer {
   width: 50%;
 }
 
+.left input,
+.right input {
+  width: 60%;
+}
 #date {
   font-size: 30px;
 }
@@ -412,12 +422,16 @@ footer {
 #listOfAppts {
   width: 100%;
   padding-bottom: 200px;
+  margin-left: -2.5%;
 }
 
 ol {
   list-style-type: none;
   width: 100%;
-  margin-left: -2.5%;
+}
+
+li {
+  list-style-type: none;
 }
 
 .dashboard {
@@ -774,6 +788,7 @@ h2 {
 
   .centerArea textarea {
     font-size: 20px;
+    width: 90%;
   }
 
   .left {
@@ -909,6 +924,7 @@ h2 {
   .itemInDash3 {
     grid-area: quote;
     margin-top: -70px;
+    margin-bottom: 25px;
   }
   .itemInDash4 {
     grid-area: list;
@@ -919,6 +935,7 @@ h2 {
 
   #listOfAppts {
     width: 100%;
+    margin-left: -2.5%;
   }
 
   ol {
