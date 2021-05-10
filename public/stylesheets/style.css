@@ -26,7 +26,7 @@ h4 {
 }
 
 a:hover {
-  color: #3486eb;
+  color: #8d8d8d;
 }
 
 button {
@@ -167,6 +167,7 @@ form label {
 
 header {
   border-bottom: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -261,6 +262,8 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+  background-color: rgba(255, 255, 255, 0.3);
+
   backdrop-filter: blur(10px);
   left: 0;
   bottom: 0;
@@ -412,7 +415,7 @@ footer {
   margin-top: -70px;
   border-left: 1px solid black;
   border-right: 1px solid black;
-  height: auto;
+  min-height: 670px;
 }
 
 .newApptToCreate {
@@ -496,7 +499,7 @@ h2 {
     font-family: sans-serif;
     color: #333;
     background-image: url(pexels-olia-danilevich-5088025.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: 1000px;
     font-family: "Courier New", monospace;
   }
@@ -879,10 +882,9 @@ h2 {
   }
 
   .topTitle {
-    width: 50%;
-    margin-left: 25%;
+    width: 100%;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 250px;
   }
 
   #calendar {
@@ -897,9 +899,9 @@ h2 {
   }
 
   .createAppointment {
-    width: 50%;
+    width: 70%;
     font-size: 50px;
-    margin-left: 25%;
+    margin-left: 15%;
     color: black;
     position: absolute;
   }
@@ -929,7 +931,8 @@ h2 {
   .itemInDash4 {
     grid-area: list;
     margin-top: -70px;
-    border-left: 1px solid black;
+    border-left: 1px solid rgba(0, 0, 0, 0);
+    border-right: 1px solid rgba(0, 0, 0, 0);
     height: 670px;
   }
 
