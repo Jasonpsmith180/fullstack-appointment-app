@@ -5,14 +5,14 @@ const express = require("express");
 const exphbs = require('express-handlebars');
 const routes = require("./controllers");
 const sequelize = require("./config/connection");
-// const passport = require('./config/passport');
-// const passport = require('passport');
-// require('./config/passport')(passport);
+const passport = require('passport');
+require('./config/passport')(passport);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 const session = require("express-session");
+const flash = require('express-flash');
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const sess = {
@@ -39,8 +39,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
 app.use(routes);
 
