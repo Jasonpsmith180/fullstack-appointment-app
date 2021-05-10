@@ -20,6 +20,12 @@ Path,
 Express-Handlebars
 
 ## Usage
+Delpoyed Heroku: 
+https://secure-basin-72350.herokuapp.com/
+
+GitHub Page: 
+https://github.com/Jasonpsmith180/fullstack-appointment-app
+
 ![project-2 login](https://user-images.githubusercontent.com/77599683/117602756-b3416d00-b10e-11eb-8d54-108b750c3a7d.png)
 
 ![project-2 create](https://user-images.githubusercontent.com/77599683/117602939-159a6d80-b10f-11eb-8572-a27538efca9d.png)
