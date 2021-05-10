@@ -879,10 +879,9 @@ h2 {
   }
 
   .topTitle {
-    width: 50%;
-    margin-left: 25%;
+    width: 100%;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 250px;
   }
 
   #calendar {
@@ -897,9 +896,9 @@ h2 {
   }
 
   .createAppointment {
-    width: 50%;
+    width: 70%;
     font-size: 50px;
-    margin-left: 25%;
+    margin-left: 15%;
     color: black;
     position: absolute;
   }
