@@ -1,0 +1,25 @@
+<article>
+    <a href="/dashboard"> &larr; Back to dashboard</a>
+    <h2>
+        Edit Post
+    </h2>
+    <form class="edit-post-form">
+        <div>
+        <label for="appointment-title">Title</label>
+        <input type="text" id="appointment-title" name="appointment-title" value="{{post.title}}"/>
+        </div>
+        <div>
+        <label for="appointment-text">Content</label>
+        <textarea type="text" name="appointment-text" value="{{post.content}}"></textarea>
+        </div>
+        <div>
+        <label for="appointment-date">Date</label>
+        <input type="text" id="appointment-date" name="appointment-date" value="{{post.date_time}}"/>
+        </div>
+        <button type="submit">Save Appointment</button>
+        <button type="button" class="delete-post-btn">Delete post</button>
+    </form>
+</article>
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>

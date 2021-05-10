@@ -1,257 +1,876 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    color: #333;
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: #333;
+  background-image: url(pexels-olia-danilevich-5088025.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Courier New", monospace;
 }
 
-a, h3, h4 {
-    text-decoration: none;
-    color: #225ca3;
-    font-weight: bold;
-    transition: color .1s;
+a,
+h3,
+h4 {
+  text-decoration: none;
+  color: #225ca3;
+  font-weight: bold;
+  transition: color 0.1s;
 }
 
 a:hover {
-    color: #3486eb;
+  color: #3486eb;
+}
+
+p {
+  padding: 0px;
+  margin: 5px
 }
 
 button {
-    background-color: #225ca3;
-    border: 0;
-    padding: 1%;
-    color: white;
-    font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: #225ca3;
+  border: 0;
+  padding: 1%;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
 }
-    
+
 button:hover {
-    background-color: #3486eb;
+  background-color: #3486eb;
 }
 
 .save-note {
-    display: none;
+  display: none;
 }
 
 .icons i {
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.note-textarea, .note-title {
-    color: #000000;
-    width: 100%;
-    outline: none;
-    border: none;
+.note-textarea,
+.note-title {
+  color: #000000;
+  width: 100%;
+  outline: none;
+  border: none;
 }
 
 .note-textarea {
-    resize: none;
-    height: calc(100% - 63px);
-    padding-top: 15px;
-    }
+  resize: none;
+  height: calc(100% - 63px);
+  padding-top: 15px;
+}
 
 .note-title {
-    height: 50px;
-    margin-top: 13px;
-    font-size: 3rem;
+  height: 50px;
+  margin-top: 13px;
+  font-size: 3rem;
 }
 
-.note-title:read-only, .note-textarea:read-only, .date {
-    color: #757575;
+.note-title:read-only,
+.note-textarea:read-only,
+.date {
+  color: #757575;
 }
+
+.apptList li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0px;
+}
+
 .list-container .card {
-    height: calc(100vh - 70px);
-    border-bottom: none;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  height: calc(100vh - 70px);
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .list-container {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .list-container .list-group,
 .list-container .list-group-item:first-child,
 .list-container .card {
-    border-top: none;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .list-container i {
-    font-size: 1.1rem;
-    cursor: pointer;
+  font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .list-container .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 20px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #225ca3;
+  border: 0;
+  padding: 1%;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #3486eb;
+}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+}
+
+textarea,
+input {
+  padding: 0.5%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 1px solid #3486eb;
+}
+
+textarea {
+  min-width: 40%;
+  min-height: 100px;
+}
+
+form > div {
+  margin-bottom: 2%;
+}
+
+form label {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+  backdrop-filter: blur(25px);
+}
+
+header h1 {
+  font-size: 1em;
+}
+
+main {
+  flex: 1;
+}
+
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #225ca3;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color 0.1s;
+  margin-left: 16px;
+}
+
+.btn-no-style:hover {
+  background: none;
+  color: #3486eb;
+}
+
+.delete-post-btn {
+  background-color: #d41414;
+}
+
+.delete-post-btn:hover {
+  background-color: #ff643d;
+}
+
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.post .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: #000000;
+}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+}
+
+.edit-link {
+  display: block;
+  margin: -1.5% 0 2% 0;
+}
+
+.new-post-form input {
+  width: 300px;
+}
+
+.edit-post-form {
+  margin-bottom: 5%;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+  backdrop-filter: blur(10px);
+  left: 0;
+  bottom: 0;
+}
+
+.centerArea {
+  text-align: center;
+  margin-top: 100px;
+  z-index: 1000;
+  border-radius: 10px;
+  padding: 20px;
+  padding-bottom: 30px;
+  font-size: 30px;
+  display: block;
+  min-height: 500px;
+}
+.centerArea input {
+  font-size: 20px;
+  width: 60%;
+}
+
+.centerArea textarea {
+  font-size: 20px;
+}
+
+.left {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+.right {
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+
+#date {
+  font-size: 30px;
+}
+.grid-container .monthEl {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.monthEl .arrow {
+  margin-left: 40%;
+}
+
+.monthEl .middleArea {
+  margin-left: 25%;
+}
+
+.arrow {
+  margin-top: 5%;
+  margin-left: 0%;
+}
+.fullDate {
+  font-size: 15px;
+  margin-top: 0%;
+  margin-left: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.grid-item,
+.fullDate {
+  color: rgb(0, 0, 0);
+}
+
+.grid-item {
+  margin-left: 25%;
+  width: 50%;
+}
+
+.day {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: -5px;
+}
+
+.day:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow:hover,
+.homeButton:hover {
+  color: rgb(61, 61, 61);
+}
+
+.homeButton {
+  display: none;
+}
+.todayDate {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.todayDate:hover {
+  background-color: white;
+}
+
+.homeToToday {
+  float: right;
+  display: flex;
+  margin-top: -20px;
+}
+
+.topTitle {
+  width: 100%;
+  text-align: center;
+  margin-top: 300px;
+}
+
+#calendar {
+  width: 100%;
+  margin-left: 0%;
+  display: grid;
+  border-radius: 20px;
+  color: black;
+  z-index: 1000;
+  height: 200px;
+  margin-top: -5%;
+}
+
+.createAppointment {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  margin-left: 40%;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+    background-image: url(pexels-olia-danilevich-5088025.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Courier New", monospace;
+  }
+
+  a,
+  h3,
+  h4 {
+    text-decoration: none;
+    color: #225ca3;
+    font-weight: bold;
+    transition: color 0.1s;
+  }
+
+  a:hover {
+    color: #3486eb;
+  }
+
+  button {
+    background-color: #225ca3;
+    border: 0;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: #3486eb;
+  }
+
+  .save-note {
+    display: none;
+  }
+
+  .icons i {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .note-textarea,
+  .note-title {
+    color: #000000;
+    width: 100%;
+    outline: none;
+    border: none;
+  }
+
+  .note-textarea {
+    resize: none;
+    height: calc(100% - 63px);
+    padding-top: 15px;
+  }
+
+  .note-title {
+    height: 50px;
+    margin-top: 13px;
+    font-size: 3rem;
+  }
+
+  .note-title:read-only,
+  .note-textarea:read-only,
+  .date {
+    color: #757575;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .list-container .card {
+    height: calc(100vh - 70px);
+    border-bottom: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .list-container {
+    padding-left: 0;
+  }
+
+  .list-container .list-group,
+  .list-container .list-group-item:first-child,
+  .list-container .card {
+    border-top: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .list-container i {
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  .list-container .list-group-item {
     border-left: none;
     border-right: none;
     padding: 20px;
     cursor: pointer;
+  }
+
+  button {
+    background-color: #225ca3;
+    border: 0;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: #3486eb;
+  }
+
+  .post-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  textarea,
+  input {
+    padding: 0.5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+    border: 1px solid #3486eb;
+  }
+
+  textarea {
+    min-width: 40%;
+    min-height: 100px;
+  }
+
+  form > div {
+    margin-bottom: 2%;
+  }
+
+  form label {
+    display: block;
+  }
+
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+  }
+
+  header h1 {
+    font-size: 1em;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225ca3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color 0.1s;
+    margin-left: 16px;
+  }
+
+  .btn-no-style:hover {
+    background: none;
+    color: #3486eb;
+  }
+
+  .delete-post-btn {
+    background-color: #d41414;
+  }
+
+  .delete-post-btn:hover {
+    background-color: #ff643d;
+  }
+
+  .post {
+    margin-bottom: 2%;
+    line-height: 150%;
+  }
+
+  .post .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7d7d7d;
+  }
+
+  .edit-link {
+    display: block;
+    margin: -1.5% 0 2% 0;
+  }
+
+  .upvote-btn {
+    background-color: #197d0f;
+    transition: background-color 0.1s;
+  }
+
+  .upvote-btn:hover {
+    background-color: #1f9c13;
+  }
+
+  .comment-form {
+    margin-bottom: 5%;
+  }
+
+  .comment {
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+
+  .comment:nth-child(odd) {
+    background-color: #fff5eb;
+  }
+
+  .comment .meta {
+    font-size: 90%;
+    margin-bottom: 0.5%;
+    opacity: 0.6;
+  }
+
+  .new-post-form input {
+    width: 300px;
+  }
+
+  .edit-post-form {
+    margin-bottom: 5%;
+  }
+
+  footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+  }
+
+  .centerArea {
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 100px;
+    z-index: 1000;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    display: block;
+    min-height: 400px;
+  }
+  .centerArea input {
+    width: 90%;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .centerArea textarea {
+    font-size: 20px;
+  }
+
+  .left {
+    display: inline-block;
+    float: left;
+    width: 50%;
+  }
+  .right {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+
+  #date {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .grid-container .monthEl {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .monthEl .arrow {
+    margin-left: 40%;
+  }
+
+  .monthEl .middleArea {
+    margin-left: 35%;
+  }
+
+  .arrow {
+    margin-top: 5%;
+    margin-left: 50%;
+  }
+  .fullDate {
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0%;
+    margin-left: 0%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+
+  .grid-item,
+  .fullDate {
+    color: rgb(0, 0, 0);
+  }
+
+  .grid-item {
+    margin-left: 20%;
+    width: 50%;
+  }
+
+  .day {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .day:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .arrow:hover,
+  .homeButton:hover {
+    color: rgb(61, 61, 61);
+  }
+
+  .homeButton {
+    display: none;
+  }
+  .todayDate {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .todayDate:hover {
+    background-color: white;
+  }
+
+  .homeToToday {
+    float: right;
+    display: flex;
+    margin-top: -20px;
+  }
+
+  .topTitle {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #calendar {
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 20px;
+    color: black;
+    background-color: rgba(126, 126, 126, 0.459);
+    z-index: 1000;
+    backdrop-filter: blur(25px);
+    display: none;
+  }
+
+  .createAppointment {
+    width: 30%;
+    text-align: center;
+    font-size: 50px;
+    margin-left: 20%;
+    color: black;
+  }
+
+  #date {
+    margin-top: -150px;
+  }
+  #days {
+    margin-top: -150px;
+  }
+  #arrowsBox {
+    margin-top: -200px;
+  }
+  .itemInDash2 {
+    grid-area: calendar;
+    margin-top: -70px;
+    display: none;
+  }
 }
 
-button {
-background-color: #225ca3;
-border: 0;
-padding: 1%;
-color: white;
-font-weight: bold;
-transition: background-color .1s;
-cursor: pointer;
-border-radius: 5px;
+.itemInDash1 {
+  grid-area: header;
+}
+.itemInDash2 {
+  grid-area: calendar;
+  margin-top: -70px;
+}
+.itemInDash3 {
+  grid-area: quote;
+  margin-top: -70px;
+}
+.itemInDash4 {
+  grid-area: list;
+  margin-top: -70px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 670px;
 }
 
-button:hover {
-background-color: #3486eb;
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "quote list list calendar ";
 }
 
-.post-list {
-margin: 0;
-padding: 0;
+.dashboard div {
+  text-align: center;
+  padding: 10px 0;
 }
 
-textarea, input {
-padding: .5%;
-border-radius: 5px;
-border: 1px solid #ccc;
+#date,
+#days {
+  height: 200px;
 }
 
-textarea:focus, input:focus {
-outline: none;
-border: 1px solid #3486eb;
+#date {
+  margin-top: -50px;
+}
+#days {
+  margin-top: -50px;
+}
+#arrowsBox {
+  margin-top: -100px;
 }
 
-textarea {
-min-width: 40%;
-min-height: 100px;
+#nextAppt {
+  font-size: 10px;
+  margin-top: -100px;
+  width: 20%;
+  margin-left: 40%;
 }
-
-form > div {
-margin-bottom: 2%;
-}
-
-form label {
-display: block;
-}
-
-.wrapper {
-width: 100%;
-min-height: 100%;
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-}
-
-header {
-border-bottom: 1px solid #ccc;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 1%;
-}
-
-header h1 {
-font-size: 1em;
-}
-
-main {
-flex: 1;
-padding: 2% 4%;
-}
-
-.btn-no-style {
-background: none;
-border: none;
-padding: 0;
-cursor: pointer;
-text-decoration: none;
-color: #225ca3;
-font-size: 100%;
-font-weight: bold;
-transition: color .1s;
-margin-left: 16px;
-}
-
-.btn-no-style:hover {
-background: none;
-color: #3486eb;
-}
-
-.delete-post-btn {
-background-color: #d41414;
-}
-
-.delete-post-btn:hover {
-background-color: #ff643d;
-}
-
-.post {
-margin-bottom: 2%;
-line-height: 150%;
-}
-
-.post .title span {
-font-style: italic;
-font-size: 90%;
-color: #7d7d7d;
-}
-
-.edit-link {
-display: block;
-margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
-background-color: #197d0f;
-transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-background-color: #1f9c13;
-}
-
-.comment-form {
-margin-bottom: 5%;
-}
-
-.comment {
-padding: 1%;
-margin-bottom: 1%;
-}
-
-.comment:nth-child(odd) {
-background-color: #fff5eb;
-}
-
-.comment .meta {
-font-size: 90%;
-margin-bottom: .5%;
-opacity: .6;
-}
-
-.new-post-form input {
-width: 300px;
-}
-
-.edit-post-form {
-margin-bottom: 5%;
-}
-
-footer {
-border-top: 1px solid #ccc;
-display: flex;
-justify-content: center;
-padding: 1%;
-font-size: 110%;
+#nextAppt h3 {
+  font-size: 30px;
 }

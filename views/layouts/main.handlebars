@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +16,7 @@
                 <a href="/">Appointment Keeper</a>
             </h1>
             <nav>
-
-                <a href="/">Home</a>
-                <button id="logout" class="btn-no-style">logout</button>
-
-                <a href="/login">login</a>
-
+                {{> nav }}
             </nav>
         </header>
         <main>
@@ -28,12 +24,15 @@
         </main>
         <footer>
             Thanks for using Appointment Keeper!
+            <br>
+            <br>
+            Try our Responsive mobile view too!
         </footer>
     </div>
 
-
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-
+    {{/if}}
 
 </body>
 
