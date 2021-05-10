@@ -2,7 +2,7 @@ const { Post, User } = require('../models');
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     console.log(req.session);
     Post.findAll({
         order: [["date_time", "ASC"]],

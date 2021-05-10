@@ -28,6 +28,11 @@ a:hover {
   color: #3486eb;
 }
 
+p {
+  padding: 0px;
+  margin: 5px
+}
+
 button {
   background-color: #225ca3;
   border: 0;
@@ -79,6 +84,15 @@ button:hover {
 .date {
   color: #757575;
 }
+
+.apptList li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0px;
+}
+
 .list-container .card {
   height: calc(100vh - 70px);
   border-bottom: none;
@@ -460,6 +474,11 @@ footer {
   .date {
     color: #757575;
   }
+
+  li {
+    list-style-type: none;
+  }
+
   .list-container .card {
     height: calc(100vh - 70px);
     border-bottom: none;
@@ -828,7 +847,7 @@ footer {
 
 .dashboard div {
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 #date,
