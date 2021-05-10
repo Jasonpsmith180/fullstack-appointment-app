@@ -29,6 +29,11 @@ a:hover {
   color: #3486eb;
 }
 
+p {
+  padding: 0px;
+  margin: 5px
+}
+
 button {
   background-color: #225ca3;
   border: 0;
@@ -80,6 +85,15 @@ button:hover {
 .date {
   color: #757575;
 }
+
+.apptList li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0px;
+}
+
 .list-container .card {
   height: calc(100vh - 70px);
   border-bottom: none;
@@ -551,6 +565,11 @@ h2 {
   .date {
     color: #757575;
   }
+
+  li {
+    list-style-type: none;
+  }
+
   .list-container .card {
     height: calc(100vh - 70px);
     border-bottom: none;
@@ -906,16 +925,40 @@ h2 {
     margin-top: -70px;
     display: none;
   }
-  .itemInDash3 {
-    grid-area: quote;
-    margin-top: -70px;
-  }
-  .itemInDash4 {
-    grid-area: list;
-    margin-top: -70px;
-    border-left: 1px solid black;
-    height: 670px;
-  }
+
+}
+
+.itemInDash1 {
+  grid-area: header;
+}
+.itemInDash2 {
+  grid-area: calendar;
+  margin-top: -70px;
+}
+.itemInDash3 {
+  grid-area: quote;
+  margin-top: -70px;
+}
+.itemInDash4 {
+  grid-area: list;
+  margin-top: -70px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 670px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "quote list list calendar ";
+}
+
+.dashboard div {
+  text-align: center;
+  padding: 10px 0;
+}
+
 
   #listOfAppts {
     width: 100%;
