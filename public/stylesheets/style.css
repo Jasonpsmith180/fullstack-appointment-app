@@ -13,6 +13,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Courier New", monospace;
+  background-color: #c5bbb1;
 }
 
 a,
@@ -228,12 +229,24 @@ main {
   margin: -1.5% 0 2% 0;
 }
 
+#appointment-date {
+  width: 20%;
+}
+
 .new-post-form input {
   width: 300px;
 }
-
+article {
+  width: 70%;
+  margin-left: 15%;
+}
+article h2,
+a {
+  text-align: center;
+}
 .edit-post-form {
   margin-bottom: 5%;
+  text-align: center;
 }
 
 footer {
@@ -245,6 +258,8 @@ footer {
   backdrop-filter: blur(10px);
   left: 0;
   bottom: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .centerArea {
@@ -370,15 +385,91 @@ footer {
   margin-top: -5%;
 }
 
-.createAppointment {
-  width: 100%;
-  text-align: center;
-  font-size: 50px;
-  margin-left: 40%;
-  color: black;
+.itemInDash1 {
+  grid-area: header;
+  height: 200px;
+}
+.itemInDash2 {
+  grid-area: calendar;
+  margin-top: -70px;
+}
+.itemInDash3 {
+  grid-area: quote;
+  margin-top: -70px;
+}
+.itemInDash4 {
+  grid-area: list;
+  margin-top: -70px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: auto;
 }
 
-@media only screen and (max-width: 600px) {
+.newApptToCreate {
+  margin-top: 70px;
+}
+
+#listOfAppts {
+  width: 100%;
+  padding-bottom: 200px;
+}
+
+ol {
+  list-style-type: none;
+  width: 100%;
+  margin-left: -2.5%;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "quote list calendar ";
+  grid-template-columns: 30% 40% 30%;
+}
+
+.dashboard div {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#date,
+#days {
+  height: 200px;
+}
+
+#date {
+  margin-top: -50px;
+}
+#days {
+  margin-top: -50px;
+}
+#arrowsBox {
+  margin-top: -100px;
+}
+
+#nextAppt {
+  font-size: 10px;
+  margin-top: -100px;
+  width: 20%;
+  margin-left: 40%;
+}
+#nextAppt h3 {
+  font-size: 30px;
+}
+h2 {
+  width: 50%;
+  border-bottom: 1px solid black;
+  margin-left: 25%;
+}
+.createAppointment {
+  width: 50%;
+  font-size: 50px;
+  margin-left: 25%;
+  color: black;
+  position: absolute;
+}
+@media only screen and (max-width: 700px) {
   * {
     box-sizing: border-box;
   }
@@ -392,7 +483,7 @@ footer {
     color: #333;
     background-image: url(pexels-olia-danilevich-5088025.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 1000px;
     font-family: "Courier New", monospace;
   }
 
@@ -469,6 +560,10 @@ footer {
 
   .list-container {
     padding-left: 0;
+  }
+
+  #appointment-date {
+    width: 40%;
   }
 
   .list-container .list-group,
@@ -551,6 +646,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+    backdrop-filter: blur(25px);
   }
 
   header h1 {
@@ -601,6 +697,12 @@ footer {
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    font-size: 20px;
   }
 
   .upvote-btn {
@@ -645,12 +747,16 @@ footer {
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+    backdrop-filter: blur(10px);
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
   }
 
   .centerArea {
     text-align: center;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     margin-top: 100px;
     z-index: 1000;
     border-radius: 10px;
@@ -671,14 +777,12 @@ footer {
   }
 
   .left {
-    display: inline-block;
-    float: left;
-    width: 50%;
+    display: block;
+    width: 100%;
   }
   .right {
-    display: inline-block;
-    float: right;
-    width: 50%;
+    display: block;
+    width: 100%;
   }
 
   #date {
@@ -760,7 +864,8 @@ footer {
   }
 
   .topTitle {
-    width: 100%;
+    width: 50%;
+    margin-left: 25%;
     text-align: center;
     margin-top: 50px;
   }
@@ -777,11 +882,11 @@ footer {
   }
 
   .createAppointment {
-    width: 30%;
-    text-align: center;
+    width: 50%;
     font-size: 50px;
-    margin-left: 20%;
+    margin-left: 25%;
     color: black;
+    position: absolute;
   }
 
   #date {
@@ -793,65 +898,41 @@ footer {
   #arrowsBox {
     margin-top: -200px;
   }
+  .itemInDash1 {
+    grid-area: header;
+  }
   .itemInDash2 {
     grid-area: calendar;
     margin-top: -70px;
     display: none;
   }
-}
+  .itemInDash3 {
+    grid-area: quote;
+    margin-top: -70px;
+  }
+  .itemInDash4 {
+    grid-area: list;
+    margin-top: -70px;
+    border-left: 1px solid black;
+    height: 670px;
+  }
 
-.itemInDash1 {
-  grid-area: header;
-}
-.itemInDash2 {
-  grid-area: calendar;
-  margin-top: -70px;
-}
-.itemInDash3 {
-  grid-area: quote;
-  margin-top: -70px;
-}
-.itemInDash4 {
-  grid-area: list;
-  margin-top: -70px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  height: 670px;
-}
+  #listOfAppts {
+    width: 100%;
+  }
 
-.dashboard {
-  display: grid;
-  grid-template-areas:
-    "header header header header"
-    "quote list list calendar ";
-}
+  ol {
+    list-style-type: none;
+    width: 100%;
+    margin-left: -2.5%;
+  }
 
-.dashboard div {
-  text-align: center;
-  padding: 20px 0;
-}
-
-#date,
-#days {
-  height: 200px;
-}
-
-#date {
-  margin-top: -50px;
-}
-#days {
-  margin-top: -50px;
-}
-#arrowsBox {
-  margin-top: -100px;
-}
-
-#nextAppt {
-  font-size: 10px;
-  margin-top: -100px;
-  width: 20%;
-  margin-left: 40%;
-}
-#nextAppt h3 {
-  font-size: 30px;
+  .dashboard {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "quote"
+      "list";
+    grid-template-columns: 100%;
+  }
 }
